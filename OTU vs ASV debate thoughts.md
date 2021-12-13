@@ -5,8 +5,13 @@
 
 <h1 id="to-cluster-or-not-to-cluster">To cluster or not to cluster</h1>
 <p><strong>Context</strong> - You have sequenced the DNA of a microbial community using next generation sequencing (~ Illumina Miseq NGS) with your custom primer set. How do you figure out what species or types of organisms are in your dataset? The two prevailing paradigms are using OTUs and ASVs and there is a lot of debate out there on each of them and the contexts where they are most useful.</p>
-<p>I want to compile my thoughts on the debate of clustering 97% identity (= OTUs) vs using raw denoised amplicon sequences (ASV) with the contexts where each is more relevant, with links for further reading.<br>
-Look at my <a href="https://docs.google.com/presentation/d/17aro50YRmPq0sMHzjGNwyIXOuvBc0BHzv-PNpaTxmTY/edit#slide=id.p">google slide ppt</a> for a brief context</p>
+<p>I compiled my thoughts from readings on this debate of</p>
+<ul>
+<li>clustering 97% identity (= OTUs) vs</li>
+<li>using raw denoised amplicon sequences (ASV)</li>
+</ul>
+<p>To figure out scenarios where each is more relevant, with links for further reading.<br>
+Look at my <a href="https://docs.google.com/presentation/d/17aro50YRmPq0sMHzjGNwyIXOuvBc0BHzv-PNpaTxmTY/edit#slide=id.p">google slide ppt</a> for detailed explanation and introduction to the NGS sequencing</p>
 <h2 id="synthesis">Synthesis</h2>
 <p>ASVs are good when data quality is higher (lower sequencing noise), you want higher taxonomic resolution (species -&gt; strain level?). Most importantly the analysis using ASVs should not hinge on diversity metrics of individual organisms in the sample, and you must be aware that you could be looking at different ASVs covering intra-genomic variation in your data (multiple distinct 16s copies in the same organism, ex: <em>E. coli</em> has 7 copies)</p>
 <p>If you choose to go with a higher taxonomic level of data and are willing to trade off with ease of re-usability/reproducibility of data without reanalysis and fresh OTU formation then do OTUs with the best method. Among methods to generate OTUs, swarm like clustering methods are better than either open or closed references as Pat Schloss (<em>Mothur’s creator</em>) points out - <em>closed reference ones are more stable, independent of data (though dependent of reference databases, which also update frequently)</em></p>
