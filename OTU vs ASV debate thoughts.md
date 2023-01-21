@@ -4,7 +4,8 @@
 ---
 
 <h1 id="to-cluster-or-not-to-cluster">To cluster or not to cluster</h1>
-<p><strong>Context</strong> - You have sequenced the DNA of a microbial community using next generation sequencing (~ Illumina Miseq NGS) with your custom primer set. How do you figure out what species or types of organisms are in your dataset? The two prevailing paradigms are using OTUs and ASVs and there is a lot of debate out there on each of them and the contexts where they are most useful.</p>
+<p><strong>Context</strong> - You have sequenced the DNA of a microbial community using next generation sequencing (~ Illumina Miseq NGS) with your custom primer set. How do you figure out what species or types of organisms are in your dataset? 
+  You start by reducing the dataset to unique sequences/clusters by removing duplicates/errors before subsequently matching to 16S databases. The two prevailing paradigms to de-clutter the sequences are using OTUs and ASVs and there is a lot of debate out there on each of them and the contexts where they are most useful.</p>
 <p>I compiled my thoughts from readings on this debate of</p>
 <ul>
 <li>clustering 97% identity (= OTUs) vs</li>
@@ -34,6 +35,7 @@ Look at my <a href="https://docs.google.com/presentation/d/17aro50YRmPq0sMHzjGNw
 <p>For analysis to be reproducible the fundamental units must be reproducible, and <em>de novo</em> OTUs are not. For analysis to be comprehensive the fundamental units must be comprehensive, and closed-reference OTUs are not. Replacing OTUs with ASVs makes marker-gene sequencing more precise, reusable, reproducible and comprehensive</p>
 </blockquote>
 </li>
+  <li> To me, this point by itself makes ASVs way superior for reproducibility sake.</li>
 </ul>
 </li>
 <li>ASVs have the <strong>potential to have higher resolution</strong> (single nucleotide), given high quality error free data. Given full length 16s reads (<em>Pacbio, nanopore</em> etc) can even distinguish strains within species by differentiating intra-genomic variation of the multiple copies of the gene within the same organism.
